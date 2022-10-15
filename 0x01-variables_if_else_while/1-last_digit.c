@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * main - entry
- * Return: Always 0
- */
+* main - entry
+* Return: Always 0
+*/
 int main(void)
 {
 	int n;
@@ -27,5 +27,6 @@ int main(void)
 	{
 		printf("last digit of %d is %d and is less than 6 and not 0\n", n, a);
 	}
-	Return:(0)
+	return: (0)
 }
+
