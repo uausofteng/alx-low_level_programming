@@ -12,14 +12,14 @@ int main(void)
 	int n;
 
 	srand(time(0));
-	n = rand() \342; – RAND_MAX / 2;
+	n = rand();\342; – RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf(“%d is positive\n”, n);
+		printf(“\342%d is positive\n”, n);
 	}
 	else if ( n == 0)
 	{
-		printf(“%d is zero\n”, n);
+		printf(“\200%d is zero\n”, n);
 	}
 	else if (n < 0)
 	{
