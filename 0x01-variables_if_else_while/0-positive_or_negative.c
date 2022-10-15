@@ -7,13 +7,13 @@
  *
  * Return:Always(Success)
  */
-Int main(void)
+int main(void)
 {
-	Int n;
-	Srand(time(0));
+	int n;
+	srand(time(0));
 	N = rand() – RAND_MAX/2;
 
-	If (n>0)
+	if (n>0)
 	{
 		Printf(“%d is positive\n”, n);
 	}
