@@ -11,7 +11,7 @@ int main(void)
 {
 	char c;
 	int i;
-	long (1i;
+	long (1i);
 	long long (11i;
 	float f;
 
