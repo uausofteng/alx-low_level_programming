@@ -1,7 +1,8 @@
 #include <stdio.h>
+
 /**
- * main Entry point
- *
+ * main -  Prints the size of many variable
+ * description: the stating point of the programme
  * Return: Always 0 (Success)
  */
 int main(void)
