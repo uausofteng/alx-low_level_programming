@@ -2,7 +2,7 @@
 
 /**
 * main - Prints a series of numbers with cammas
-* Return: Always (Success)
+* Return: Always 0 (Success);
 */
 int main(void)
 {
