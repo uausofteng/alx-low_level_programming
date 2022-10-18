@@ -1,21 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - prints all combination of the single digits
- * Return: Always 0
- */
+* main - Prints a series of numbers with cammas
+* Return: Always (Success)
+*/
 int main(void)
 {
-	int n;
+	int c;
 
-	for (n = 48; n < 58; n++)
-
-		putchar(n);
-	if (n != 57)
+	for (c = 0; c <= '9'; c++)
 	{
-		putchar(' ');
+		putchar(c);
+
+	if (c != '9')
+	{
 		putchar(',');
+		putchar(' ');
+	}
 	}
 	putchar('\n');
+
 	return (0);
 }
