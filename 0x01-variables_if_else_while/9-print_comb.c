@@ -1,24 +1,16 @@
 #include <stdio.h>
-
 /**
-* main - Prints a series of numbers with cammas
-* Return: Always 0 (Success);
-*/
-int main(void)
+ * main - Print a comma-separated list of numbers from 0 to 9
+void main(void)
 {
-	int c;
-
-	for (c = 0; c <= '9'; c++)
-	{
-		putchar(c);
-
-	if (c != '9')
-	{
-		putchar(',');
-		putchar(' ');
-	}
-	}
-	putchar('\n');
-
-	return (0);
+	int i;
+	clrscr();
+	printf("Print a comma-separated list of numbers from 0 to 9 :\n");
+	for (i = 0; i <= 9; i++) {
+		printf("%d", i);
+		if (i < 10)
+			printf(", ");
+		}
+	printf("\n");
+	getch();
 }
