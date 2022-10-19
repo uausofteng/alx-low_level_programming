@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * time_table - main prints the 9 time_table
- * Description: main function time_table
+ * times_table - main prints the 9 times_table
+ * Description: main function times_table
  */
-void time_table(void)
+void times_table(void)
 {
 	int num, mult, prod;
 
