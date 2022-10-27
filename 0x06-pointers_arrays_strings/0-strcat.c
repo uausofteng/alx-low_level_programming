@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates the sring pointed
- * @dest: pointer to string to be concatenated
- * @src: the source string to appended to @dest
- * Return: a pointer to tje destination @dest
- */
-char *_strcat(char *dest, char *src)
+* _strcat - concatenates the sring pointed
+* @dest: pointer to string to be concatenated
+* @src: the source string to appended to @dest
+* Return: a pointer to tje destination @dest
+*/
+char *_strcat(char *dest, const char *src)
 {
 	int index = 0, len_dest = 0;
 
