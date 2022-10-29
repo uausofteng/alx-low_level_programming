@@ -9,7 +9,7 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 	/*
-	 * int main - write your line of code here...
+	 * main - write your line of code here...
 	 * Remembe:
 	 * - you are not allowed to use a
 	 * - you are not allowed to modify p
