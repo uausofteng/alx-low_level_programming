@@ -9,8 +9,9 @@
  * @n: The number of bytes to be filled.
  * Description _semset: over there
  *
- * Return: A pointer to the filled memory area es
+ * Return: A pointer to the filled memory area @s
  */
+
 char *_memset(void *s, int c, size_t n)
 {
 	unsigned int index;
