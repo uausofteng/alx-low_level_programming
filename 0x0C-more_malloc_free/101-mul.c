@@ -153,7 +153,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 		next_prod++;
 
 	for (; *final_prod != 'x'; final_prod--
-			{
+	{
 			num = (*final_prod - '0') + (*next_prod - '0');
 			num += tens;
 			*final_prod = (num % 10) + '0';
@@ -161,10 +161,10 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 
 			next_prod--;
 			next_len--;
-			}
+	}
 
-			for (; next_len >= 0 && *next_prod != 'x'; next_len--)
-			{
+	for (; next_len >= 0 && *next_prod != 'x'; next_len--)
+	{
 			num = (*next_prod - '0');
 			num += tens;
 			*final_prod = (num % 10) + '0';
@@ -172,7 +172,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 
 			final_prod--;
 			next_prod--;
-			}
+	}
 	if (tens)
 		*final_prod = (tens % 10) + '0'
 }
