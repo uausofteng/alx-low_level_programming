@@ -4,7 +4,7 @@
 
 /**
  * print_dog - Prints a struct dog.
- * @d:The struct dog to be printed.
+ * @d: The struct dog to be printed.
  */
 void print_dog(struct dog *d)
 {
@@ -12,17 +12,16 @@ void print_dog(struct dog *d)
 		return;
 
 	if (d->name == NULL)
-		printf("Name: (nil)\n");
+		printf("Name: (nil)\n")
 	else
-		printf("Name: %s\n*, d->name);
+		printf("Name: %s\n", d->name);
 
 	if (d->age < 0)
-		printf("Age : (nil)\n");
+		printf("Age: (nil)\n");
 	else
-		printf("Age : % f\n", d->age);
-
+		printf("Age: %f\n", d->age);
 	if (d->owner == NULL)
-		printf("Owner : (nil)\n");
+		printf("Owner: (nil)\n");
 	else
-		printf("Owmer : % s\n", d->owner);
+		printf("Owner: %s\n", d->owner);
 }
