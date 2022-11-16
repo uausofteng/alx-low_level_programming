@@ -13,7 +13,6 @@ void print_name(char *name, void (*f)(char *))
 		f(name);
 }
 
-1-array_iterator.c
 #include "function_pointers.h"
 
 /**
@@ -31,5 +30,5 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (array && action)
 		for (i = 0; i < size; i++)
- 			action(array[i]);
+			action(array[i]);
 }
