@@ -1,1 +1,27 @@
-906609
+#include <stdio.h>
+
+int isPalindrome(int num) {
+    int original = num;
+    int reverse = 0;
+    while (num > 0) {
+        int lastDigit = num % 10;
+        reverse = (reverse * 10) + lastDigit;
+        num /= 10;
+    }
+    return original == reverse;
+}
+
+int main() {
+    int largestPalindrome = 0;
+    int i, j;
+    for (i = 100; i <= 999; i++) {
+        for (j = 100; j <= 999; j++) {
+            int product = i * j;
+            if (isPalindrome(product) && product > largestPalindrome) {
+                largestPalindrome = product;
+            }
+        }
+    }
+    printf("Largest palindrome made from the product of two 3-digit numbers is: %d\n", largestPalindrome);
+    return 0;
+}
