@@ -1,6 +1,55 @@
-import ctypes
+#include <Python.h>
 
-mylibrary = ctypes.CDLL('./mylibrary.so')
-result = mylibrary.add(1, 2)
-print(result)
+static PyObject* add(PyObject* self, PyObject* args) {
+    int a, b;
+    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
+        return NULL;
+    }
+    return Py_BuildValue("i", a + b);
+}
+
+static PyObject* sub(PyObject* self, PyObject* args) {
+    int a, b;
+    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
+        return NULL;
+    }
+    return Py_BuildValue("i", a - b);
+}
+
+static PyObject* mul(PyObject* self, PyObject* args) {
+    int a, b;
+    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
+        return NULL;
+    }
+    return Py_BuildValue("i", a * b);
+}
+
+static PyObject* div(PyObject* self, PyObject* args) {
+    int a, b;
+    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
+        return NULL;
+    }
+    return Py_BuildValue("i", a / b);
+}
+
+static PyObject* mod(PyObject* self, PyObject* args) {
+    int a, b;
+    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
+        return NULL;
+    }
+    return Py_BuildValue("i", a % b);
+}
+
+static PyMethodDef MyMethods[] = {
+    {"add", add, METH_VARARGS, "Add two integers"},
+    {"sub", sub, METH_VARARGS, "Subtract two integers"},
+    {"mul", mul, METH_VARARGS, "Multiply two integers"},
+    {"div", div, METH_VARARGS, "Divide two integers"},
+    {"mod", mod, METH_VARARGS, "Modulus of two integers"},
+    {NULL, NULL, 0, NULL}
+};
+
+PyMODINIT_FUNC initoperations(void) {
+    (void) Py_InitModule("operations", MyMethods);
+}
 
