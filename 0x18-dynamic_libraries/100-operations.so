@@ -1,19 +1,6 @@
-#include <Python.h>
+import ctypes
 
-static PyObject* add(PyObject* self, PyObject* args) {
-    int a, b;
-    if (!PyArg_ParseTuple(args, "ii", &a, &b)) {
-        return NULL;
-    }
-    return Py_BuildValue("i", a + b);
-}
-
-static PyMethodDef MyMethods[] = {
-    {"add", add, METH_VARARGS, "Add two integers"},
-    {NULL, NULL, 0, NULL}
-};
-
-PyMODINIT_FUNC initmylibrary(void) {
-    (void) Py_InitModule("mylibrary", MyMethods);
-}
+mylibrary = ctypes.CDLL('./mylibrary.so')
+result = mylibrary.add(1, 2)
+print(result)
 
