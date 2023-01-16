@@ -3,6 +3,12 @@ import ctypes
 cops = ctypes.CDLL('./100-operations.so')
 a = 5
 b = 3
-result = cops.add(a, b)
-print(result) # 8
+result = cops.sub(a, b)
+print(result) # 2
+result = cops.mul(a, b)
+print(result) # 15
+result = cops.div(a, b)
+print(result) # 1
+result = cops.mod(a, b)
+print(result) # 2
 
